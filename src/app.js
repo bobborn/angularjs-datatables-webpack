@@ -12,7 +12,29 @@ import 'angular-resource';
 
 angular.module('app', ['ngResource'])
     .controller('MainController', ['$scope', 'Role', function ($scope, Role) {
-        $scope.options = {};
+        $scope.options = {
+            "columns": [
+                {
+                    "data": "id"
+                },
+                {
+                    "data": "name"
+                },
+                {
+                    "data": "createUser"
+                },
+                {
+                    "data": "createTime"
+                },
+                {
+                    "data": "updateUser"
+                },
+                {
+                    "data": "updateTime"
+                }
+
+            ]
+        };
 
         $scope.getRoles = function () {
             var params = {
@@ -45,11 +67,7 @@ angular.module('app', ['ngResource'])
                 options: '='
             },
             link: function (scope, el, attrs) {
-                // el.dataTable();
-                // $("#testTable").dataTable();
                 var dataTable = $(el).dataTable(scope.options);
-                console.log(scope);
-
                 scope.$watch('options.dataSource', handleModelUpdates, true);
 
                 function handleModelUpdates(newData) {
