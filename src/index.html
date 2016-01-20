@@ -5,24 +5,80 @@
     <title></title>
     <link href="../node_modules/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet"/>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="../dist/bundle.js"></script>
-</head>
-<body ng-controller="MainController">
-<button ng-click="getRoles()">加载角色列表</button>
-<br>
-<br>
-<table my-table options="options" class="table">
-    <thead>
-    <th width="20%">Id</th>
-    <th width="10%">Name</th>
-    <th width="10%">Create User</th>
-    <th width="20%">Create Time</th>
-    <th width="10%">Update User</th>
-    <th width="20%">Update Time</th>
-    </thead>
-    <!--<tbody>-->
-    <!--</tbody>-->
-</table>
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="assets/css/left-menu.css" rel="stylesheet"/>
 
+</head>
+<body>
+<div class="navbar navbar-duomi navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/Admin/index.html" id="logo">配置管理系统（流量包月）
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+                <!--<li class="active">-->
+                    <!--<a href="#">-->
+                        <!--<i class="glyphicon glyphicon-th-large"></i>-->
+                        <!--首页-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="active">
+                    <a href="#basicInit" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        系统管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="basicInit" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li><a href="#/zero-config"><i class="glyphicon glyphicon-user"></i>零配置</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>功能启用/禁用</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>默认排序</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>多列排序</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>多个表格</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./plans.html">
+                        <i class="glyphicon glyphicon-credit-card"></i>
+                        物料管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./grid.html">
+                        <i class="glyphicon glyphicon-globe"></i>
+                        分发配置
+                        <span class="label label-warning pull-right">5</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./charts.html">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        图表统计
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-fire"></i>
+                        关于系统
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-md-10" ui-view>
+
+        </div>
+    </div>
+</div>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../dist/bundle.js"></script>
 </body>
 </html>
