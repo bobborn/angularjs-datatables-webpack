@@ -5,10 +5,7 @@
 
 export default class ZCController {
     constructor() {
-        this.options = {
-            "paging": true,
-            "ordering": true
-        };
+        this.options = {};
     }
 }
 

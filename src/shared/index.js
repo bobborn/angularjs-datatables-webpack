@@ -4,6 +4,8 @@
 
 
 import angular from 'angular';
+import table from './table';
 
-export default angular.module('app.shared.table', [])
+
+export default angular.module('app.shared', [table])
     .name;
