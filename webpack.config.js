@@ -5,16 +5,15 @@
 var path = require('path');
 var webpack = require('webpack');
 
-//console.log(path.resolve(__dirname,'math.js'));
-
 var config = {
-    entry: './app.js',
+    entry: './src/app.js',
     output: {
+        path:'./dist',
         filename: 'bundle.js'
     },
     resolve: {
         alias: {
-            math: path.resolve(__dirname, 'math.js')
+            math: path.resolve(__dirname,'src', 'math.js')
         }
     },
     module: {
@@ -33,7 +32,7 @@ var config = {
                 loader: 'style!css'
             },
             {
-                test: path.resolve(__dirname, 'math.js'),
+                test: path.resolve(__dirname,'src', 'math.js'),
                 loader: 'exports?Math'
             }
         ]

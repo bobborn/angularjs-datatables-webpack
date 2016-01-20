@@ -8,7 +8,7 @@ import angular from 'angular';
 import 'angular-resource';
 //var Math=require("exports?Math!./math.js");
 //var Math=require('exports?Math!math');
-var Math = require('math');
+//var Math = require('math');
 
 angular.module('app', ['ngResource'])
     .controller('MainController', ['$scope', 'Role', function ($scope, Role) {
