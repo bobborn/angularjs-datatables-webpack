@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="node_modules/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="bundle.js"></script>
+</head>
+<body ng-controller="MainController">
+<button ng-click="getRoles()">Get Roles</button>
+<table my-table options="options" class="table">
+    <thead>
+    <th width="20%">Id</th>
+    <th width="10%">Name</th>
+    <th width="10%">Create User</th>
+    <th width="20%">Create Time</th>
+    <th width="10%">Update User</th>
+    <th width="20%">Update Time</th>
+    </thead>
+    <!--<tbody>-->
+    <!--</tbody>-->
+</table>
+
+</body>
+</html>
