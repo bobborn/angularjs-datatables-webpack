@@ -3,9 +3,15 @@
  */
 
 
-function routes($stateProvider){
+function routes($stateProvider) {
+    $stateProvider.state('role', {
+        url: '/role',
+        templateUrl: './components/role/role.list.tpl.html',
+        controller: 'RoleListController',
+        controllerAs: 'roleList'
+    });
 }
 
-routes.$inject=['$stateProvider'];
+routes.$inject = ['$stateProvider'];
 
 export default routes;

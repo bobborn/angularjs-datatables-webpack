@@ -16,14 +16,17 @@ export default class TableDirective {
 
     link(scope, el, attrs) {
         console.log(scope);
-        var dataTable = $(el).dataTable(scope.options);
+        var dataTable = $(el).DataTable(scope.options);
         scope.$watch('options.dataSource', handleModelUpdates, true);
 
         function handleModelUpdates(newData) {
             var data = newData || null;
             if (data) {
-                dataTable.fnClearTable();
-                dataTable.fnAddData(data);
+                console.log(scope.options.recordsTotal);
+                dataTable.clear();
+                dataTable.rows.add(data).draw();
+                console.log(dataTable);
+               // console.log(dataTable.ajax.json());
             }
         }
     }

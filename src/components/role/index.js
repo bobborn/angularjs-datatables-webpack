@@ -6,11 +6,15 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
+import Role from './role.service';
+
 import roleListController from './role.list.controller';
 import routing from './role.routes';
+
 
 
 export default angular.module('app.components.role', [uiRouter])
     .config(routing)
     .controller('RoleListController', roleListController)
+    .factory('Role', Role)
     .name;
