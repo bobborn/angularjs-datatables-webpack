@@ -30,6 +30,29 @@ export default class RoleListController {
             ]
         };
 
+
+        this.options.ajax = function(data, callback, settings) {
+
+            $http.get("http://api.yinile.com/api/roles?page=0&size=10")
+                .success(function (response) {
+                    let dataSource = new Array(response.values.length);
+                    for (let i = 0; i < response.values.length; i++) {
+                        let valueItem = response.values[i];
+                        let tmpArr = [valueItem.name, valueItem.createTime, valueItem.createUser, valueItem.updateTime,
+                            valueItem.updateUser, "<a href='javascript:void(0)'>&#x7F16;&#x8F91;</a>"];
+                        dataSource[i] = tmpArr;
+                    }
+                    var jynObj = {
+                        "draw": 1,
+                        "recordsTotal": 14,
+                        "recordsFiltered": 14,
+                        "data": dataSource
+                    };
+                    console.log(jynObj);
+                    callback(jynObj);
+                });
+        };
+
         this.getRoles();
 
     }
@@ -48,5 +71,4 @@ export default class RoleListController {
         });
     }
 }
-
-RoleListController.$inject = ['Role'];
+RoleListController.$inject = ["$http"];

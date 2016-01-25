@@ -12,6 +12,6 @@ function routes($stateProvider) {
     });
 }
 
-routes.$inject = ['$stateProvider'];
+routes.$inject=['$stateProvider'];
 
 export default routes;
