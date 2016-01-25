@@ -16,7 +16,7 @@ export default class TableDirective {
 
     link(scope, el, attrs) {
         console.log(scope);
-        var dataTable = $(el).dataTable(scope.options);
+        var dataTable = $(el).dataTable(scope.options); /*
         scope.$watch('options.dataSource', handleModelUpdates, true);
 
         function handleModelUpdates(newData) {
@@ -25,7 +25,7 @@ export default class TableDirective {
                 dataTable.fnClearTable();
                 dataTable.fnAddData(data);
             }
-        }
+        } */
     }
 }
 
