@@ -4,6 +4,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
     entry: './src/app.js',
@@ -28,8 +29,8 @@ var config = {
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
-                loader: 'style!css'
+                //exclude: /node_modules/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
             {
                 test: path.resolve(__dirname,'src', 'math.js'),
@@ -40,8 +41,9 @@ var config = {
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery"
-        })
-    ],
+        }),
+        new ExtractTextPlugin('app.css', {allChunks: false})
+    ]
     //externals:{
     //    jquery:'jQuery'
     //}
