@@ -8,6 +8,7 @@ import role from './role';
 import  zeroConfig from './zero-configuration';
 import featureEnableDisable from './feature-enable-disable';
 import defaultOrdering from './default-ordering';
+import multiColumnOrdering from './multi-column-ordering';
 
-export default angular.module('app.components', [role, zeroConfig, featureEnableDisable, defaultOrdering])
+export default angular.module('app.components', [role, zeroConfig, featureEnableDisable, defaultOrdering,multiColumnOrdering])
     .name;
