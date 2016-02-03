@@ -12,9 +12,10 @@ import multiColumnOrdering from './multi-column-ordering';
 import multiTables from './multi-tables';
 import hiddenColumns from './hidden-columns';
 import complexHeader from './complex-header';
+import dom from './dom';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
-    complexHeader])
+    complexHeader,dom])
     .name;
