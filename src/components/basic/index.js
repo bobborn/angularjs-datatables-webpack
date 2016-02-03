@@ -19,11 +19,12 @@ import altPagination from './alt-pagination';
 import scrollY from './scroll-y';
 import scrollYDynamic from './scroll-y-dynamic';
 import scrollX from './scroll-x';
+import scrollXY from './scroll-xy';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
     complexHeader, dom, flexibleWidth,
     stateSave, altPagination, scrollY, scrollYDynamic,
-    scrollX])
+    scrollX,scrollXY])
     .name;
