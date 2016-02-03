@@ -4,7 +4,8 @@
 
 
 import angular from 'angular';
-import basic from './basic'
+import basic from './basic';
+import advanced from './advanced';
 
-export default angular.module('app.components', [basic])
+export default angular.module('app.components', [basic,advanced])
     .name;
