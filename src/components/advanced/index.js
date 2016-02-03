@@ -13,8 +13,10 @@ import objectDomRead from './object-dom-read';
 import html5DataOptions from './html5-data-options';
 import html5DataAttrs from './html5-data-attributes';
 import languageFile from './language-file';
+//TODO
+import defaults from './defaults';
 
 export default angular.module('app.components.advanced', [eventsLive, dtEvents, columnRender,
     lengthMenu, domMultiElements, complexHeader, objectDomRead,
-    html5DataOptions,html5DataAttrs,languageFile])
+    html5DataOptions,html5DataAttrs,languageFile,defaults])
     .name;
