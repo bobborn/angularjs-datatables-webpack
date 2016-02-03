@@ -6,7 +6,10 @@
 export default class ComplexHeaderController {
     constructor() {
         this.options = {
-
+            "language": {
+                "decimal": ",",
+                "thousands": "."
+            }
         };
     }
 }

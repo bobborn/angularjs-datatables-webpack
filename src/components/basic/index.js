@@ -20,11 +20,13 @@ import scrollY from './scroll-y';
 import scrollYDynamic from './scroll-y-dynamic';
 import scrollX from './scroll-x';
 import scrollXY from './scroll-xy';
+import commaDecimal from './comma-decimal';
+import language from './language';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
     complexHeader, dom, flexibleWidth,
     stateSave, altPagination, scrollY, scrollYDynamic,
-    scrollX,scrollXY])
+    scrollX,scrollXY,commaDecimal,language])
     .name;
