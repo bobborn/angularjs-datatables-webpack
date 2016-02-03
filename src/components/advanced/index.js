@@ -4,7 +4,8 @@
 
 import angular from 'angular';
 import eventsLive from './events-live';
+import dtEvents from './dt-events';
 
 
-export default angular.module('app.components.advanced', [eventsLive])
+export default angular.module('app.components.advanced', [eventsLive,dtEvents])
     .name;

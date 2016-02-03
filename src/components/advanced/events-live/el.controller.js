@@ -4,14 +4,13 @@
 
 export default class EventsLiveController {
     constructor() {
-        this.options = {
-        };
+        this.options = {};
     }
 
-    rowClick(row){
+    rowClick(row) {
         var data = row.data();
-        alert( 'You clicked on '+data[0]+'\'s row' );
-    };
+        alert('You clicked on ' + data[0] + '\'s row');
+    }
 }
 
 

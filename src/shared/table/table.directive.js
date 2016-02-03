@@ -10,19 +10,45 @@ export default class TableDirective {
         this.replace = true;
         this.scope = {
             options: "=",
-            rowClick: "&"
+            rowClick: "&",
+            orderCallback: "&",
+            searchCallback: "&",
+            pageCallback: "&"
         };
     }
 
 
     link(scope, el, attrs) {
-        console.log(scope);
-        var dataTable = $(el).DataTable(scope.options);
+
+        var dataTable = $(el)
+            .on('order.dt', function () {
+
+                var handler = scope.orderCallback();
+                if (typeof handler === 'function') {
+                    handler();
+                }
+            })
+            .on('search.dt', function () {
+                var handler = scope.searchCallback();
+                if (typeof handler === 'function') {
+                    handler();
+                }
+            })
+            .on('page.dt', function () {
+                var handler = scope.pageCallback();
+                if (typeof handler === 'function') {
+                    handler();
+                }
+            })
+            .DataTable(scope.options);
+
 
         //点击行
         $(el).on('click', 'tbody > tr', function () {
             var expressionHandler = scope.rowClick();
-            expressionHandler(dataTable.row(this));
+            if (typeof expressionHandler === 'function') {
+                expressionHandler(dataTable.row(this));
+            }
         });
 
 
