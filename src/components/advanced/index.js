@@ -3,7 +3,8 @@
  */
 
 import angular from 'angular';
+import eventsLive from './events-live';
 
 
-export default angular.module('app.components.advanced', [])
+export default angular.module('app.components.advanced', [eventsLive])
     .name;

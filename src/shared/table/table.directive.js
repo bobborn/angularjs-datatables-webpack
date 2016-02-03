@@ -9,7 +9,8 @@ export default class TableDirective {
         this.restrict = 'EA';
         this.replace = true;
         this.scope = {
-            options: "="
+            options: "=",
+            rowClick: "&"
         };
     }
 
@@ -17,6 +18,14 @@ export default class TableDirective {
     link(scope, el, attrs) {
         console.log(scope);
         var dataTable = $(el).DataTable(scope.options);
+
+        //点击行
+        $(el).on('click', 'tbody > tr', function () {
+            var expressionHandler = scope.rowClick();
+            expressionHandler(dataTable.row(this));
+        });
+
+
         scope.$watch('options.dataSource', handleModelUpdates, true);
 
         function handleModelUpdates(newData) {
@@ -26,7 +35,7 @@ export default class TableDirective {
                 dataTable.clear();
                 dataTable.rows.add(data).draw();
                 console.log(dataTable);
-               // console.log(dataTable.ajax.json());
+                // console.log(dataTable.ajax.json());
             }
         }
     }
