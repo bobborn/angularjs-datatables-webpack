@@ -17,10 +17,11 @@ import flexibleWidth from './flexible-width';
 import stateSave from './state-save';
 import altPagination from './alt-pagination';
 import scrollY from './scroll-y';
+import scrollYDynamic from './scroll-y-dynamic';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
     complexHeader, dom, flexibleWidth,
-    stateSave,altPagination,scrollY])
+    stateSave,altPagination,scrollY,scrollYDynamic])
     .name;
