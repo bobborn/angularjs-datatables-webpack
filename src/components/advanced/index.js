@@ -10,8 +10,9 @@ import lengthMenu from './length-menu';
 import domMultiElements from './dom-multiple-elements';
 import complexHeader from './complex-header';
 import objectDomRead from './object-dom-read';
-
+import html5DataOptions from './html5-data-options';
 
 export default angular.module('app.components.advanced', [eventsLive, dtEvents, columnRender,
-    lengthMenu, domMultiElements,complexHeader,objectDomRead])
+    lengthMenu, domMultiElements, complexHeader, objectDomRead,
+    html5DataOptions])
     .name;
