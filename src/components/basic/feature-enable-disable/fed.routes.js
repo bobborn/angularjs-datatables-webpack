@@ -5,7 +5,7 @@
 function routes($stateProvider) {
     $stateProvider.state('featureEnableDisable', {
         url: '/feature-enable-disable',
-        templateUrl: './components/feature-enable-disable/fed.tpl.html',
+        templateUrl: './components/basic/feature-enable-disable/fed.tpl.html',
         controller: 'FeatureEnableDisableController',
         controllerAs: 'fed'
     })

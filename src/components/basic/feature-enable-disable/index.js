@@ -5,8 +5,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import routes from './fed.routes';
-import FeatureEnableDisableController from './fed.controller';
+import routes from './fed.routes.js';
+import FeatureEnableDisableController from './fed.controller.js';
 
 
 export default angular.module('app.components.feature-enable-disable', [uiRouter])

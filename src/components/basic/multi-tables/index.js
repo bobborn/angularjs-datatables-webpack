@@ -6,8 +6,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import routes from './mt.routes';
-import MultiTablesController from './mt.controller';
+import routes from './mt.routes.js';
+import MultiTablesController from './mt.controller.js';
 
 
 export default angular.module('app.components.multi-tables', [uiRouter])

@@ -6,7 +6,7 @@
 function routes($stateProvider) {
     $stateProvider.state('multiColumnOrdering', {
         url: '/multi-column-ordering',
-        templateUrl: './components/multi-column-ordering/mco.tpl.html',
+        templateUrl: './components/basic/multi-column-ordering/mco.tpl.html',
         controller: 'MultiColumnOrderingController',
         controllerAs: 'mco'
     })

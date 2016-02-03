@@ -6,7 +6,7 @@
 function routes($stateProvider) {
     $stateProvider.state('multiTables', {
         url: '/multi-tables',
-        templateUrl: './components/multi-tables/mt.tpl.html',
+        templateUrl: './components/basic/multi-tables/mt.tpl.html',
         controller: 'MultiTablesController',
         controllerAs: 'mt'
     })

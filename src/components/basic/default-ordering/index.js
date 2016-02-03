@@ -5,8 +5,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import routes from './do.routes';
-import DefaultOrderingController from './do.controller';
+import routes from './do.routes.js';
+import DefaultOrderingController from './do.controller.js';
 
 
 export default angular.module('app.components.default-ordering', [uiRouter])

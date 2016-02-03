@@ -6,7 +6,7 @@
 function routes($stateProvider) {
     $stateProvider.state('role', {
         url: '/role',
-        templateUrl: './components/role/role.list.tpl.html',
+        templateUrl: './components/basic/role/role.list.tpl.html',
         controller: 'RoleListController',
         controllerAs: 'roleList'
     });

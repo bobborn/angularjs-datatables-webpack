@@ -5,7 +5,7 @@
 function routes($stateProvider) {
     $stateProvider.state('defaultOrdering', {
         url: '/default-ordering',
-        templateUrl: './components/default-ordering/do.tpl.html',
+        templateUrl: './components/basic/default-ordering/do.tpl.html',
         controller: 'DefaultOrderingController',
         controllerAs: 'do'
     })

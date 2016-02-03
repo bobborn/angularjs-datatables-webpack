@@ -6,7 +6,7 @@
 function routes($stateProvider) {
     $stateProvider.state('zeroConfiguration', {
         url: '/zero-config',
-        templateUrl: './components/zero-configuration/zc.tpl.html',
+        templateUrl: './components/basic/zero-configuration/zc.tpl.html',
         controller: 'ZeroConfigurationController',
         controllerAs: 'zc'
     })

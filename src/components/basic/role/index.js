@@ -6,10 +6,10 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import Role from './role.service';
+import Role from './role.service.js';
 
-import roleListController from './role.list.controller';
-import routing from './role.routes';
+import roleListController from './role.list.controller.js';
+import routing from './role.routes.js';
 
 
 

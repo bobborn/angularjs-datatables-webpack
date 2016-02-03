@@ -5,8 +5,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import routes from './mco.routes';
-import MultiColumnOrderingController from './mco.controller';
+import routes from './mco.routes.js';
+import MultiColumnOrderingController from './mco.controller.js';
 
 
 export default angular.module('app.components.multi-column-ordering', [uiRouter])

@@ -6,8 +6,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import routes from './zc.routes';
-import ZCController from './zc.controller';
+import routes from './zc.routes.js';
+import ZCController from './zc.controller.js';
 
 
 export default angular.module('app.components.zeroConfig', [uiRouter])

@@ -6,7 +6,7 @@
 function routes($stateProvider) {
     $stateProvider.state('hiddenColumns', {
         url: '/hidden-columns',
-        templateUrl: './components/hidden-columns/hc.tpl.html',
+        templateUrl: './components/basic/hidden-columns/hc.tpl.html',
         controller: 'HiddenColumnsController',
         controllerAs: 'hc'
     })
