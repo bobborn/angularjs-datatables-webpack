@@ -15,10 +15,11 @@ import complexHeader from './complex-header';
 import dom from './dom';
 import flexibleWidth from './flexible-width';
 import stateSave from './state-save';
+import altPagination from './alt-pagination';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
     complexHeader, dom, flexibleWidth,
-    stateSave])
+    stateSave,altPagination])
     .name;
