@@ -9,7 +9,7 @@ import routes from './do.routes.js';
 import DefaultOrderingController from './do.controller.js';
 
 
-export default angular.module('app.components.default-ordering', [uiRouter])
+export default angular.module('app.components.basic.default-ordering', [uiRouter])
     .config(routes)
     .controller('DefaultOrderingController', DefaultOrderingController)
     .name;

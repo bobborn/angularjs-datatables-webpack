@@ -9,7 +9,7 @@ import routes from './mco.routes.js';
 import MultiColumnOrderingController from './mco.controller.js';
 
 
-export default angular.module('app.components.multi-column-ordering', [uiRouter])
+export default angular.module('app.components.basic.multi-column-ordering', [uiRouter])
     .config(routes)
     .controller('MultiColumnOrderingController', MultiColumnOrderingController)
     .name;

@@ -10,7 +10,7 @@ import routes from './ch.routes.js';
 import ComplexHeaderController from './ch.controller.js';
 
 
-export default angular.module('app.components.complex-header', [uiRouter])
+export default angular.module('app.components.basic.complex-header', [uiRouter])
     .config(routes)
     .controller('ComplexHeaderController', ComplexHeaderController)
     .name;

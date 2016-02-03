@@ -13,7 +13,7 @@ import routing from './role.routes.js';
 
 
 
-export default angular.module('app.components.role', [uiRouter])
+export default angular.module('app.components.basic.role', [uiRouter])
     .config(routing)
     .controller('RoleListController', roleListController)
     .factory('Role', Role)

@@ -10,7 +10,7 @@ import routes from './hc.routes.js';
 import HiddenColumnsController from './hc.controller.js';
 
 
-export default angular.module('app.components.hidden-columns', [uiRouter])
+export default angular.module('app.components.basic.hidden-columns', [uiRouter])
     .config(routes)
     .controller('HiddenColumnsController', HiddenColumnsController)
     .name;

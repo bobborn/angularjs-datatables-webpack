@@ -10,7 +10,7 @@ import routes from './zc.routes.js';
 import ZCController from './zc.controller.js';
 
 
-export default angular.module('app.components.zeroConfig', [uiRouter])
+export default angular.module('app.components.basic.zeroConfig', [uiRouter])
     .config(routes)
     .controller('ZeroConfigurationController', ZCController)
     .name;

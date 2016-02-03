@@ -10,7 +10,7 @@ import routes from './mt.routes.js';
 import MultiTablesController from './mt.controller.js';
 
 
-export default angular.module('app.components.multi-tables', [uiRouter])
+export default angular.module('app.components.basic.multi-tables', [uiRouter])
     .config(routes)
     .controller('MultiTablesController',MultiTablesController)
     .name;

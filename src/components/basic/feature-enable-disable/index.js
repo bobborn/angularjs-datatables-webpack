@@ -9,7 +9,7 @@ import routes from './fed.routes.js';
 import FeatureEnableDisableController from './fed.controller.js';
 
 
-export default angular.module('app.components.feature-enable-disable', [uiRouter])
+export default angular.module('app.components.basic.feature-enable-disable', [uiRouter])
     .config(routes)
     .controller('FeatureEnableDisableController', FeatureEnableDisableController)
     .name;
