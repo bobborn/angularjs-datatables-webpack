@@ -14,9 +14,11 @@ import hiddenColumns from './hidden-columns';
 import complexHeader from './complex-header';
 import dom from './dom';
 import flexibleWidth from './flexible-width';
+import stateSave from './state-save';
 
 export default angular.module('app.components.basic', [role, zeroConfig, featureEnableDisable,
     defaultOrdering, multiColumnOrdering,
     multiTables, hiddenColumns,
-    complexHeader, dom, flexibleWidth])
+    complexHeader, dom, flexibleWidth,
+    stateSave])
     .name;
